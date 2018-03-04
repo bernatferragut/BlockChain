@@ -1,0 +1,30 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "BlockChain App",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "prod": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernatferragut/BlockChain.git"
+  },
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "Bernat Ferragut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bernatferragut/BlockChain/issues"
+  },
+  "homepage": "https://github.com/bernatferragut/BlockChain#readme",
+  "devDependencies": {
+    "webpack": "^4.1.0"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "webpack-cli": "^2.0.10"
+  }
+}
