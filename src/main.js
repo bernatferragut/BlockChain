@@ -1,7 +1,7 @@
 // var requireDirectory = require('require-directory');
 // module.exports = requireDirectory(module);
 
-// importin SHA256 Cypher Library
+// importing SHA256 Cypher Library
 
 const SHA256 = require('crypto-js/sha256');
 
