@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "dev": "webpack -d --watch",
-    "prod": "webpack -p"
+    "prod": "webpack -p",
+    "webpack" : "webpack"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,6 @@
     "webpack": "^4.1.0"
   },
   "dependencies": {
-    "crypto-js": "^3.1.9-1",
-    "webpack-cli": "^2.0.10"
+    "crypto-js": "^3.1.9-1"
   }
 }
