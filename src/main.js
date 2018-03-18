@@ -1,6 +1,3 @@
-// var requireDirectory = require('require-directory');
-// module.exports = requireDirectory(module);
-
 // importing SHA256 Cypher Library
 
 const SHA256 = require('crypto-js/sha256');
@@ -68,5 +65,11 @@ bernieCoin.addBlock(new Block(2, '04/03/2018', { amount: 9 }));
 
 console.log(JSON.stringify(bernieCoin, null, 2));
 // console.log('is bernieCoin valid? => ' + isChainValid());
+
+// =======================================================
+
+// let button1 = document.getElementById('buttonA');
+
+
 
 
