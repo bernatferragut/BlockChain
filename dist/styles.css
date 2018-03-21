@@ -1,0 +1,41 @@
+/* CSS */
+body {
+    color: greenyellow;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    background-color:black;
+    margin: 0;
+}
+/* LAYOUT */
+.wrapper {
+    display: grid;
+    margin-top: 5%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    max-height: auto;
+}
+
+#flex-item{
+    margin: auto;
+}
+
+/* BUTTONS */
+.btn {
+    background-color:#101010;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: greenyellow;
+    padding: 15px 25px;
+    font-size: 10px;
+    margin: 20px;
+    color: greenyellow;
+    position: relative;
+    display: inline-block;
+  }
+
+  

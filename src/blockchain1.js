@@ -54,11 +54,10 @@ class BlockChain {
 export { Block, BlockChain };
 
 // =======================================================
-
 // Hacking the dataxs
 // bernieCoin.chain[1].data = {amount: 10};
 // Hack the hash
 // bernieCoin.chain[1].hash = bernieCoin.calculateHash();
-
 // console.log(JSON.stringify(bernieCoin, null, 2));
 // console.log('is bernieCoin valid? => ' + isChainValid());
+// =======================================================
