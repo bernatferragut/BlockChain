@@ -2,8 +2,9 @@ import { Block, BlockChain } from './blockchain1';
 
 // WORKING TEST
 let bernieCoin = new BlockChain();
-bernieCoin.addBlock(new Block(1, '03/03/2018', { amount: 4 }));
-bernieCoin.addBlock(new Block(2, '04/03/2018', { amount: 9 }));
+bernieCoin.addBlock(new Block(1, '03/03/2018', { amount: 3 }));
+bernieCoin.addBlock(new Block(2, '04/03/2018', { amount: 6 }));
+bernieCoin.addBlock(new Block(3, '04/03/2018', { amount: 9 }));
 
 
 // SELECTIONS
@@ -15,7 +16,7 @@ let data =  document.getElementById('data');
 // ACTIONS
 button1.addEventListener('click', function() {
     data.innerHTML = JSON.stringify(bernieCoin, null, 2);
-    console.log(JSON.stringify(bernieCoin, null, 2));
+    // console.log(JSON.stringify(bernieCoin, null, 2));
 });
 
 

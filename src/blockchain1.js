@@ -3,7 +3,7 @@ const SHA256 = require('crypto-js/sha256');
 
 // BLOCK  CREATION
 class Block {
-    constructor(index, timeStamp, data, previousHash='') {
+    constructor(index, timeStamp, data, previousHash = '') {
         this.index = index;
         this.timeStamp = timeStamp;
         this.data = data;
@@ -27,7 +27,7 @@ class BlockChain {
     }
 
     getLatestBlock() {
-        return 'The latest Block created is: ' + this.chain[this.chain.length-1];
+        return this.chain[this.chain.length-1];
     }
 
     addBlock(newBlock) {
