@@ -30,12 +30,33 @@ body {
     border-radius: 4px;
     border-width: 1px;
     border-color: greenyellow;
-    padding: 15px 25px;
+    padding: 15px 15px;
     font-size: 10px;
     margin: 20px;
     color: greenyellow;
     position: relative;
     display: inline-block;
+  }
+
+  /* BLOCKS DESIGN */
+
+  #blocks-design {
+    font-size: 8px;
+    background-color: yellowgreen;
+    color: #101010;
+    height: 50px;
+    width:  50px;
+    border-radius: 4px;
+    border-width: 1px solid;
+    border-color: greenyellow;
+  }
+
+  #dot-design {
+    background-color: yellowgreen;
+    height: 10px;
+    width:  1px;
+    border-width: 1px solid;
+    border-color: greenyellow;
   }
 
   
