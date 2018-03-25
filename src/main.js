@@ -1,12 +1,5 @@
 import { Block, BlockChain } from './blockchain1';
 
-// BLOCKCHAIN CREATION
-// let bernieCoin = new BlockChain();
-// bernieCoin.addBlock(new Block(1, '03/03/2018', { amount: 3 }));
-// bernieCoin.addBlock(new Block(2, '04/03/2018', { amount: 6 }));
-// bernieCoin.addBlock(new Block(3, '04/03/2018', { amount: 9 }));
-
-
 // DIV GRAPHIC BLOCK CREATION
 function createDivBlock(text, clicks) {
     let buttonText = text||'GENESIS';
@@ -21,7 +14,7 @@ function createDivBlock(text, clicks) {
     dot.setAttribute('class', 'flex-container');
 
     // text block content
-    let blockContent = document.createTextNode(buttonText + blockNumber);
+    let blockContent = document.createTextNode(buttonText + ' ' + blockNumber);
     // add text to the div
     block.appendChild(blockContent);
     // add the new Element to the DOM
@@ -29,7 +22,7 @@ function createDivBlock(text, clicks) {
     currentDiv.appendChild(block);
     currentDiv.appendChild(dot);
     // send a message
-    console.log('new block has been added');
+    console.log('new block');
 }
 
 // SELECTIONS
@@ -37,37 +30,45 @@ var button1 = document.getElementById('buttonA');
 var data =  document.getElementById('data');
 
 // ACTIONS
-var clicks = 0;
-button1.addEventListener('click', function() {
-    if (clicks === 0) {
+let clicks=0;
+let xCoin;
+button1.addEventListener('click', function(){
+    if (clicks < 1) {
         // create visual Block
         createDivBlock(); 
         // add clicks
         clicks ++;
         console.log(clicks);
         // crete a new Blockchain with Genesis Block
-        var bernieCoin = new BlockChain();
+        let bernieCoin = new BlockChain();
         // Visualize data
-        var blockchainData = JSON.stringify(bernieCoin, null, 2);
+        let blockchainData = JSON.stringify(bernieCoin, null, 2);
         data.innerHTML = blockchainData;
+        // X
+        xCoin = bernieCoin;
+        if ( clicks === 1) {
+            // change the Button text
+            button1.innerHTML = 'ADD BLOCK';
+        }
     } 
-
-    else if(clicks > 0 && clicks < 8) {
+    
+    else if ( clicks >= 1) {
         // change the Button text
         button1.innerHTML = 'ADD BLOCK';
-        console.log(button1.value);
         // add clicks
         clicks ++;
         console.log(clicks);
         // create a new visual BLOCK
         createDivBlock('BLOCK', clicks);
         // crete a new BLOCK
-        bernieCoin.addBlock(new Block(clicks, new Date().getDate(), { amount: clicks }));
-        console.log(JSON.stringify(bernieCoin, null, 2));
+        xCoin.addBlock(new Block(clicks, new Date().getTime, { amount: clicks }));
+        // console.log(JSON.stringify(xCoin, null, 2));
         // Visualize Data
-        let blockchainData = JSON.stringify(bernieCoin, null, 2);
+        let blockchainData = JSON.stringify(xCoin, null, 2);
         data.innerHTML = blockchainData;
+        // console.log(blockchainData);
     } 
+    
 
 });
 

@@ -6,6 +6,10 @@ body {
     background-color:black;
     margin: 0;
 }
+
+pre {
+    color: greenyellow;
+}
 /* LAYOUT */
 .wrapper {
     display: grid;
@@ -28,14 +32,13 @@ body {
 .btn {
     background-color:#101010;
     border-radius: 4px;
-    border-width: 1px;
+    border-width: 1px solid;
     border-color: greenyellow;
     padding: 15px 15px;
     font-size: 10px;
-    margin: 20px;
+    margin: 15px;
     color: greenyellow;
-    position: relative;
-    display: inline-block;
+
   }
 
   /* BLOCKS DESIGN */
@@ -52,7 +55,7 @@ body {
   }
 
   #dot-design {
-    background-color: yellowgreen;
+    background-color: orangered;
     height: 10px;
     width:  1px;
     border-width: 1px solid;

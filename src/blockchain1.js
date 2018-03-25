@@ -23,7 +23,7 @@ class BlockChain {
     }
 
     createGenesisBlock() {
-        return new Block(0, "03/03/2018", 'Genesis Block', '0');
+        return new Block(0, new Date().getTime, 'Genesis Block', '0');
     }
 
     getLatestBlock() {
