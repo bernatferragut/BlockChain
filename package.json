@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "prod": "webpack -p",
-    "webpack" : "webpack"
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "webpack": "^4.1.0"
   },
   "dependencies": {
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "timer.js": "^1.0.4"
   }
 }

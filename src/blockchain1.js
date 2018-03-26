@@ -9,10 +9,20 @@ class Block {
         this.data = data;
         this.previousHash = previousHash;
         this.hash = this.calculateHash();
+        // random value
+        this.nonce = 0;
     }
 
     calculateHash() {
-        return SHA256(this.index + this.timeStamp + this.previousHash + JSON.stringify(this.data)).toString();
+        return SHA256(this.index + this.timeStamp + this.previousHash + JSON.stringify(this.data) + this.nonce).toString();
+    }
+
+    mineBlock(difficulty) {
+        while(this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) {
+            this.nonce++;
+            this.hash = this.calculateHash();
+        }
+        console.log('Blocked Mined ' + this.hash);
     }
 }
 
@@ -20,6 +30,7 @@ class Block {
 class BlockChain {
     constructor(){
         this.chain = [this.createGenesisBlock()];
+        this.difficulty = 4;
     }
 
     createGenesisBlock() {
@@ -32,7 +43,8 @@ class BlockChain {
 
     addBlock(newBlock) {
         newBlock.previousHash = this.getLatestBlock().hash;
-        newBlock.hash = newBlock.calculateHash();
+        // newBlock.hash = newBlock.calculateHash();
+        newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
     }
 
@@ -61,3 +73,4 @@ export { Block, BlockChain };
 // console.log(JSON.stringify(bernieCoin, null, 2));
 // console.log('is bernieCoin valid? => ' + isChainValid());
 // =======================================================
+

@@ -1,4 +1,10 @@
 import { Block, BlockChain } from './blockchain1';
+// const timer = require('timer.js');
+
+// TIMER
+// let now = timer.getTime();
+// console.log(now);
+
 
 // DIV GRAPHIC BLOCK CREATION
 function createDivBlock(text, clicks) {
@@ -35,7 +41,7 @@ let xCoin;
 button1.addEventListener('click', function(){
     if (clicks < 1) {
         // create visual Block
-        createDivBlock(); 
+        createDivBlock();
         // add clicks
         clicks ++;
         console.log(clicks);
@@ -62,16 +68,18 @@ button1.addEventListener('click', function(){
         createDivBlock('BLOCK', clicks);
         // crete a new BLOCK
         xCoin.addBlock(new Block(clicks, new Date().getTime, { amount: clicks }));
-        // console.log(JSON.stringify(xCoin, null, 2));
+        // Count Time
+ 
+        // Check Validity
+        console.log('Valid Chain: ' + xCoin.isChainValid());
         // Visualize Data
         let blockchainData = JSON.stringify(xCoin, null, 2);
         data.innerHTML = blockchainData;
         // console.log(blockchainData);
     } 
-    
-
 });
 
+// V.2 => ADD PROOF OF WORK - Output: Nunance + Difficulty ( changeable ) + Mining Time
 
 
 
