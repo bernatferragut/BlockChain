@@ -43,9 +43,14 @@ class BlockChain {
 
     addBlock(newBlock) {
         newBlock.previousHash = this.getLatestBlock().hash;
-        // newBlock.hash = newBlock.calculateHash();
+        // Mining Time Calculation
+        let t0 = Date.now();
         newBlock.mineBlock(this.difficulty);
+        let t1 = Date.now();
+        let delay = (t1-t0)/1000;
         this.chain.push(newBlock);
+        console.log(delay + ' ms');
+        return delay;
     }
 
     isChainValid() {

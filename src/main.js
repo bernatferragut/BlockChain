@@ -1,11 +1,6 @@
 import { Block, BlockChain } from './blockchain1';
 // const timer = require('timer.js');
 
-// TIMER
-// let now = timer.getTime();
-// console.log(now);
-
-
 // DIV GRAPHIC BLOCK CREATION
 function createDivBlock(text, clicks) {
     let buttonText = text||'GENESIS';
@@ -13,6 +8,7 @@ function createDivBlock(text, clicks) {
     // create new div element
     let block = document.createElement('div');
     let dot = document.createElement('div');
+    
     // add an id 
     block.setAttribute('id', 'blocks-design');
     block.setAttribute('class', 'flex-container');
@@ -21,12 +17,15 @@ function createDivBlock(text, clicks) {
 
     // text block content
     let blockContent = document.createTextNode(buttonText + ' ' + blockNumber);
+
     // add text to the div
     block.appendChild(blockContent);
+
     // add the new Element to the DOM
     let currentDiv = document.getElementById('blocks');
     currentDiv.appendChild(block);
     currentDiv.appendChild(dot);
+
     // send a message
     console.log('new block');
 }
@@ -38,6 +37,7 @@ var data =  document.getElementById('data');
 // ACTIONS
 let clicks=0;
 let xCoin;
+let miningTime;
 button1.addEventListener('click', function(){
     if (clicks < 1) {
         // create visual Block
@@ -67,9 +67,16 @@ button1.addEventListener('click', function(){
         // create a new visual BLOCK
         createDivBlock('BLOCK', clicks);
         // crete a new BLOCK
-        xCoin.addBlock(new Block(clicks, new Date().getTime, { amount: clicks }));
-        // Count Time
- 
+        let miningTime = xCoin.addBlock(new Block(clicks, new Date().getTime, { amount: clicks }));
+        console.log('The mining time is: ' + miningTime);
+        // Count Time and create a timer div with it
+        let currentDiv = document.getElementById('blocks');
+        let time = document.createElement('div');
+        time.setAttribute('id', 'time-design');
+        time.setAttribute('class', 'flex-contianer');
+        let timeContent = document.createTextNode(miningTime+' ms');
+        time.appendChild(timeContent);
+        currentDiv.appendChild(time);
         // Check Validity
         console.log('Valid Chain: ' + xCoin.isChainValid());
         // Visualize Data
@@ -78,8 +85,6 @@ button1.addEventListener('click', function(){
         // console.log(blockchainData);
     } 
 });
-
-// V.2 => ADD PROOF OF WORK - Output: Nunance + Difficulty ( changeable ) + Mining Time
 
 
 
