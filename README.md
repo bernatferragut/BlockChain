@@ -2,5 +2,6 @@
 1. Intro to creating a BLOCKCHAIN with Javascript
 2. Foundations
 
-<img width="978" alt="blockchain-1" src="https://user-images.githubusercontent.com/17754060/37875948-ea97d336-3013-11e8-8197-9bf98753c752.png">
+<img width="1130" alt="blockchain-3" src="https://user-images.githubusercontent.com/17754060/37937493-ede89880-3127-11e8-83c2-2aa6f83cc261.png">
+
 
