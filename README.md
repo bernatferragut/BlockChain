@@ -1,4 +1,4 @@
-# BLOCKCHAIN + VISUAL LEARNING INTERFACE +
+# BLOCKCHAIN + VISUAL LEARNING INTERFACE 
 
 > A Simple graphical Interface to see how a Blockchain is created Block by Block with POW.
 
