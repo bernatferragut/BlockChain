@@ -8,6 +8,6 @@
 5. POW with time in ms of each of the BLOCKS creation
 6. JSON string showing the final result of the BLOCKCHAIN
 
-<img width="1130" alt="blockchain-3" src="https://user-images.githubusercontent.com/17754060/37937493-ede89880-3127-11e8-83c2-2aa6f83cc261.png">
+<img width="1130" alt="blockchain-3" src="https://user-images.githubusercontent.com/17754060/37937844-62ef2f26-3129-11e8-9df5-37ba87a82d15.png">
 
 
