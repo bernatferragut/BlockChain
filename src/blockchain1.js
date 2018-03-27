@@ -71,7 +71,7 @@ class BlockChain {
 export { Block, BlockChain };
 
 // =======================================================
-// Hacking the dataxs
+// Hacking the data
 // bernieCoin.chain[1].data = {amount: 10};
 // Hack the hash
 // bernieCoin.chain[1].hash = bernieCoin.calculateHash();

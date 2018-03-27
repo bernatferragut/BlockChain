@@ -11,9 +11,9 @@ function createDivBlock(text, clicks) {
     
     // add an id 
     block.setAttribute('id', 'blocks-design');
-    block.setAttribute('class', 'flex-container');
+    block.setAttribute('class', 'flex-container fadeIn');
     dot.setAttribute('id', 'dot-design');
-    dot.setAttribute('class', 'flex-container');
+    dot.setAttribute('class', 'flex-container fadeIn');
 
     // text block content
     let blockContent = document.createTextNode(buttonText + ' ' + blockNumber);
@@ -73,7 +73,7 @@ button1.addEventListener('click', function(){
         let currentDiv = document.getElementById('blocks');
         let time = document.createElement('div');
         time.setAttribute('id', 'time-design');
-        time.setAttribute('class', 'flex-contianer');
+        time.setAttribute('class', 'flex-contianer fadeIn');
         let timeContent = document.createTextNode(miningTime+' ms');
         time.appendChild(timeContent);
         currentDiv.appendChild(time);
