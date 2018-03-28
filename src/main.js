@@ -33,12 +33,15 @@ function createDivBlock(text, clicks) {
 // SELECTIONS
 var button1 = document.getElementById('buttonA');
 var data =  document.getElementById('data');
+let audio = document.getElementsByTagName('audio')[0];
 
 // ACTIONS
 let clicks=0;
 let xCoin;
 let miningTime;
 button1.addEventListener('click', function(){
+    // Audio file
+    audio.play();
     if (clicks < 1) {
         // create visual Block
         createDivBlock();
